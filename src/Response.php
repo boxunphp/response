@@ -8,10 +8,13 @@
 
 namespace All\Response;
 
+use Ali\InstanceTrait;
 use All\Utils\HttpStatus;
 
 class Response
 {
+    use InstanceTrait;
+
     /**
      * 跳转
      *
