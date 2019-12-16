@@ -9,7 +9,7 @@
 namespace All\Response;
 
 use Ali\InstanceTrait;
-use All\Utils\HttpStatus;
+use All\Utils\HttpCode;
 
 class Response
 {
@@ -21,7 +21,7 @@ class Response
      * @param string $url 链接地址
      * @param int $httpCode HTTP状态码
      */
-    public function redirect($url, $httpCode = HttpStatus::FOUND)
+    public function redirect($url, $httpCode = HttpCode::FOUND)
     {
         header('Location:' . $url, true, $httpCode);
     }
