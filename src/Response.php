@@ -44,7 +44,7 @@ class Response
         ob_clean();
         header('Content-type:application/json;charset=utf-8');
         //指定JSON_PARTIAL_OUTPUT_ON_ERROR,避免$data中有非utf-8字符导致json编码返回false
-        echo json_encode($data, JSON_PARTIAL_OUTPUT_ON_ERROR);
+        echo json_encode($data, JSON_PARTIAL_OUTPUT_ON_ERROR|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
         $this->stop();
     }
 
